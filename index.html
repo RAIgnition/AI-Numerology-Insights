@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Numerology Insights - Discover your Life Path and Name Numbers with cosmic numerology readings">
+    <meta name="keywords" content="numerology, life path number, name number, astrology, cosmic, insights">
+    <meta name="author" content="AI Numerology Insights">
+    
+    <title>AI Numerology Insights - Discover Your Numbers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%239d4edd'>✦</text></svg>">
+</head>
+<body>
+    <!-- ========== NAVIGATION HEADER ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">AI Numerology Insights</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#calculators" class="nav-link">Calculators</a>
+                <a href="#meanings" class="nav-link">Meanings</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- ========== HERO SECTION ========== -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Unlock Your Cosmic Destiny</h1>
+                    <p class="hero-subtitle">Discover the Hidden Meanings Behind Your Numbers</p>
+                    <div class="hero-buttons">
+                        <a href="#calculators" class="btn btn-primary">Calculate Now</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT NUMEROLOGY SECTION ========== -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">What is Numerology?</h2>
+                
+                <div class="about-grid">
+                    <!-- Card 1: Introduction -->
+                    <div class="info-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Ancient Wisdom</h3>
+                        <p>Numerology is an ancient divination practice that reveals the spiritual significance and vibration of numbers. It connects mathematical principles to spiritual insights, helping you understand your life's purpose and destiny.</p>
+                    </div>
+
+                    <!-- Card 2: Life Path Number -->
+                    <div class="info-card">
+                        <div class="card-icon">🔢</div>
+                        <h3>Life Path Number</h3>
+                        <p>Your Life Path Number is calculated from your birth date and represents your life's journey, innate talents, and purpose. It reveals the path you're meant to walk and the lessons you'll learn.</p>
+                    </div>
+
+                    <!-- Card 3: Name Number -->
+                    <div class="info-card">
+                        <div class="card-icon">📝</div>
+                        <h3>Name Number</h3>
+                        <p>Your Name Number, derived from your birth name using the Pythagorean system, reveals your character, abilities, and how you express yourself in the world. It's also called the Expression Number.</p>
+                    </div>
+
+                    <!-- Card 4: Master Numbers -->
+                    <div class="info-card">
+                        <div class="card-icon">👑</div>
+                        <h3>Master Numbers</h3>
+                        <p>Master Numbers (11, 22, 33) carry heightened spiritual significance and are not reduced to single digits. They represent intuition, vision, and profound spiritual responsibility and potential.</p>
+                    </div>
+
+                    <!-- Card 5: Pythagorean System -->
+                    <div class="info-card">
+                        <div class="card-icon">🔤</div>
+                        <h3>Pythagorean System</h3>
+                        <p>This system assigns numbers 1-9 to letters A-Z based on their position in the alphabet. Each letter carries its own vibration, and combined they reveal the numerical essence of names and concepts.</p>
+                    </div>
+
+                    <!-- Card 6: Spiritual Guidance -->
+                    <div class="info-card">
+                        <div class="card-icon">✨</div>
+                        <h3>Self-Discovery</h3>
+                        <p>Numerology serves as a mirror for self-reflection and spiritual guidance. Understanding your numbers helps you align with your true purpose and navigate life's journey with greater clarity and confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CALCULATORS SECTION ========== -->
+        <section id="calculators" class="calculators">
+            <div class="container">
+                <h2 class="section-title">Calculate Your Numbers</h2>
+
+                <!-- ===== Life Path Number Calculator ===== -->
+                <div class="calculator-wrapper">
+                    <div class="calculator-card">
+                        <h3 class="calculator-title">Life Path Number Calculator</h3>
+                        <p class="calculator-description">Enter your birth date to discover your Life Path Number - your journey's blueprint.</p>
+                        
+                        <form id="lifePathForm" class="calculator-form">
+                            <div class="form-group">
+                                <label for="birthDate">Birth Date:</label>
+                                <input 
+                                    type="date" 
+                                    id="birthDate" 
+                                    name="birthDate" 
+                                    required
+                                    aria-label="Select your birth date"
+                                >
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Calculate Life Path</button>
+                        </form>
+                    </div>
+
+                    <!-- Life Path Results -->
+                    <div id="lifePathResult" class="result-card hidden">
+                        <h4 class="result-title">Your Life Path Number</h4>
+                        <div class="number-display">
+                            <span class="big-number" id="lifePathNumber">-</span>
+                        </div>
+                        <div class="result-meaning" id="lifePathMeaning">
+                            <!-- Results will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Name Numerology Calculator ===== -->
+                <div class="calculator-wrapper">
+                    <div class="calculator-card">
+                        <h3 class="calculator-title">Name Number Calculator</h3>
+                        <p class="calculator-description">Enter your full name to reveal your Name Number - your personality essence.</p>
+                        
+                        <form id="nameNumerologyForm" class="calculator-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name:</label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="Enter your full name"
+                                    required
+                                    aria-label="Enter your full name"
+                                >
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Calculate Name Number</button>
+                        </form>
+                    </div>
+
+                    <!-- Name Number Results -->
+                    <div id="nameNumerologyResult" class="result-card hidden">
+                        <h4 class="result-title">Your Name Number Analysis</h4>
+                        <div class="calculation-breakdown">
+                            <p><strong>Calculation:</strong> <span id="nameBreakdown">-</span> = <span id="nameTotal">-</span></p>
+                            <p><strong>Reduced Number:</strong> <span id="nameReduced">-</span></p>
+                        </div>
+                        <div class="number-display">
+                            <span class="big-number" id="nameNumerologyNumber">-</span>
+                        </div>
+                        <div class="result-meaning" id="nameNumerologyMeaning">
+                            <!-- Results will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NUMBER MEANINGS REFERENCE ========== -->
+        <section id="meanings" class="meanings">
+            <div class="container">
+                <h2 class="section-title">Number Meanings</h2>
+                <p class="section-subtitle">Explore the profound meanings of each number</p>
+
+                <!-- Number Meaning Cards Grid -->
+                <div class="meanings-grid">
+                    <!-- Number 1 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">1</div>
+                        <h4>The Leader</h4>
+                        <p class="meaning-traits">Independent • Ambitious • Pioneering</p>
+                        <p class="meaning-text">Natural born leaders with exceptional determination and the courage to initiate new ventures.</p>
+                    </div>
+
+                    <!-- Number 2 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">2</div>
+                        <h4>The Peacemaker</h4>
+                        <p class="meaning-traits">Diplomatic • Sensitive • Intuitive</p>
+                        <p class="meaning-text">Harmonizers with emotional intelligence who excel at creating peaceful environments and cooperation.</p>
+                    </div>
+
+                    <!-- Number 3 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">3</div>
+                        <h4>The Creator</h4>
+                        <p class="meaning-traits">Expressive • Creative • Communicative</p>
+                        <p class="meaning-text">Creative forces with artistic talents and natural ability to express ideas with clarity and charm.</p>
+                    </div>
+
+                    <!-- Number 4 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">4</div>
+                        <h4>The Builder</h4>
+                        <p class="meaning-traits">Practical • Stable • Disciplined</p>
+                        <p class="meaning-text">Foundation builders who create lasting structures and bring order through reliability and hard work.</p>
+                    </div>
+
+                    <!-- Number 5 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">5</div>
+                        <h4>The Adventurer</h4>
+                        <p class="meaning-traits">Adventurous • Curious • Dynamic</p>
+                        <p class="meaning-text">Dynamic explorers who thrive on variety, change, and new experiences with natural adaptability.</p>
+                    </div>
+
+                    <!-- Number 6 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">6</div>
+                        <h4>The Nurturer</h4>
+                        <p class="meaning-traits">Caring • Compassionate • Responsible</p>
+                        <p class="meaning-text">Caring presences devoted to helping others, healing emotional wounds, and creating loving environments.</p>
+                    </div>
+
+                    <!-- Number 7 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">7</div>
+                        <h4>The Seeker</h4>
+                        <p class="meaning-traits">Analytical • Spiritual • Philosophical</p>
+                        <p class="meaning-text">Truth-seekers drawn to spiritual pursuits and research, always seeking deeper understanding and wisdom.</p>
+                    </div>
+
+                    <!-- Number 8 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">8</div>
+                        <h4>The Power Player</h4>
+                        <p class="meaning-traits">Ambitious • Authoritative • Executive</p>
+                        <p class="meaning-text">Powerful leaders with exceptional ability to manifest material success and build empires of influence.</p>
+                    </div>
+
+                    <!-- Number 9 -->
+                    <div class="meaning-card">
+                        <div class="meaning-number">9</div>
+                        <h4>The Humanitarian</h4>
+                        <p class="meaning-traits">Compassionate • Idealistic • Wise</p>
+                        <p class="meaning-text">Humanitarians with universal perspective devoted to making the world better for everyone.</p>
+                    </div>
+
+                    <!-- Master Number 11 -->
+                    <div class="meaning-card master-card">
+                        <div class="meaning-number master-number">11</div>
+                        <h4>The Illuminator <span class="master-badge">Master</span></h4>
+                        <p class="meaning-traits">Intuitive • Visionary • Inspiring</p>
+                        <p class="meaning-text">Exceptionally rare master number with heightened spiritual awareness and ability to inspire others.</p>
+                    </div>
+
+                    <!-- Master Number 22 -->
+                    <div class="meaning-card master-card">
+                        <div class="meaning-number master-number">22</div>
+                        <h4>The Architect <span class="master-badge">Master</span></h4>
+                        <p class="meaning-traits">Visionary • Practical • Master Builder</p>
+                        <p class="meaning-text">The "Master Builder" who transforms grand visions into concrete reality through large-scale projects.</p>
+                    </div>
+
+                    <!-- Master Number 33 -->
+                    <div class="meaning-card master-card">
+                        <div class="meaning-number master-number">33</div>
+                        <h4>The Teacher <span class="master-badge">Master</span></h4>
+                        <p class="meaning-traits">Compassionate • Healer • Spiritual Guide</p>
+                        <p class="meaning-text">The rarest master number representing exceptional healing, teaching, and unconditional love for humanity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Numerology Insights. All rights reserved. ✦</p>
+            <p class="footer-note">Numerology is for entertainment and self-reflection purposes.</p>
+        </div>
+    </footer>
+
+    <!-- ========== LOAD JAVASCRIPT ========== -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# 🌙✨ AI Numerology Insights
+# 🌙✨ Numerology Insights
 
 A beautiful, fully-functional numerology website built with pure HTML, CSS, and JavaScript. Discover your Life Path Number and Name Number with cosmic astrology vibes!
 
